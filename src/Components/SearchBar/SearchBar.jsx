@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import "../DisplayMusic/DisplayMusic";
+import React, { useState} from "react";
 
 const SearchBar = (props) => {
   const [songSearch, setSongSearch] = useState("");
 
-function searchResults(event) {
+  function searchResults(event) {
     event.preventDefault();
-    let response = props.songs.filter((song) => {
+    let response = props.songsArray.filter((song) => {
       if (song.album.includes(songSearch)) {
         return true;
       } else if (song.artist.includes(songSearch)) {
@@ -19,7 +18,7 @@ function searchResults(event) {
         return true;
       }
     });
-    console.log(response)
+    props.setSongs(response);
   }
 
   return (
@@ -34,6 +33,8 @@ function searchResults(event) {
         />{" "}
         <button type="submit">Search</button>
       </div>{" "}
+      <div>
+      </div>
     </form>
   );
 };

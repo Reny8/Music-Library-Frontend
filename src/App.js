@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <div>
-        <SearchBar songs={songs} />
+        <SearchBar songsArray={songs} setSongs={setSongs} />
       </div>
       <div>
         <DisplayMusic songs={songs} />
