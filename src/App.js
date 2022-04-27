@@ -17,15 +17,12 @@ function App() {
 
   return (
     <div>
-      <ul>
-        <li>
-          <h1>Music Library</h1>
-        </li>
-        <li>
-          <SearchBar />
-        </li>
-      </ul>
-      <DisplayMusic songs={songs} />
+      <div>
+        <SearchBar />
+      </div>
+      <div>
+        <DisplayMusic songs={songs} />
+      </div>
     </div>
   );
 }

@@ -2,4 +2,6 @@ ul {
     display:flex;
     list-style-type: none;
     justify-content:space-between;
+    padding-right: 1rem;
+    padding-left: 0rem;
 }
