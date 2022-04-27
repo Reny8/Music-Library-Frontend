@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     getAllSongs();
-  });
+  }, []);
 
   async function getAllSongs() {
     let response = await axios.get("http://127.0.0.1:8000/music/");
@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <div>
-        <SearchBar />
+        <SearchBar songs={songs} />
       </div>
       <div>
         <DisplayMusic songs={songs} />
