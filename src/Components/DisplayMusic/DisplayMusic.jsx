@@ -17,7 +17,7 @@ const DisplayMusic = (props) => {
             return (
               <tr key={song.id}>
                 <td>
-                  <img src={song.album_image} alt="Album"/> {song.album}
+                  <img src={song.album_image}/> {song.album}
                 </td>
                 <td>{song.artist}</td>
                 <td>{song.title}</td>
