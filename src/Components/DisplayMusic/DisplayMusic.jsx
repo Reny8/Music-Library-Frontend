@@ -9,12 +9,12 @@ const DisplayMusic = (props) => {
   }
   async function updateSong(songPk) {
     let response = await axios.put(`http://127.0.0.1:8000/music/${songPk}/`);
-    if (response.status === 200) console.log(response.data);
+    if (response.status === 200) await props.getAllSongs()
   }
 
   async function deleteSong(songPk) {
     let response = await axios.delete(`http://127.0.0.1:8000/music/${songPk}/`);
-    if (response.status === 204) console.log(response.data);
+    if (response.status === 200) await props.getAllSongs()
   }
   return (
     <div>
