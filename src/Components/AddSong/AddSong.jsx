@@ -11,11 +11,13 @@ const [release_date, setReleaseDate] = useState("")
 function Add(event) {
     event.preventDefault()
     let newSong = {
-        album_image:album_image,
-        album: album,
         title: title,
+        artist: artist,
+        album: album,
+        release_date: release_date,
         genre: genre,
-        release_date: release_date 
+        likes: 0,
+        album_image:album_image,
     }
     props.newSong(newSong)
 }
