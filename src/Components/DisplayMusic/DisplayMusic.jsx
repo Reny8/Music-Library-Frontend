@@ -2,14 +2,14 @@ import "./DisplayMusic.css";
 const DisplayMusic = (props) => {
   return (
     <div>
-      <table className='table'>
+      <table className='table table-striped'>
         <thead>
           <tr>
-            <th>ALBUM</th>
-            <th >ARTIST</th>
-            <th>TITLE</th>
-            <th>GENRE</th>
-            <th>RELEASE DATE</th>
+            <th scope='col'>ALBUM</th>
+            <th scope='col'>ARTIST</th>
+            <th scope='col'>TITLE</th>
+            <th scope='col'>GENRE</th>
+            <th scope='col'>RELEASE DATE</th>
           </tr>
         </thead>
         <tbody>

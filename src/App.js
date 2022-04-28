@@ -29,10 +29,10 @@ function App() {
         <SearchBar songs={songs} setSongs={setSongs} />
       </div>
       <div>
-        <AddSong songs={songs} newSong={newSong} />
+        <DisplayMusic songs={songs} />
       </div>
       <div>
-        <DisplayMusic songs={songs} />
+        <AddSong songs={songs} newSong={newSong} />
       </div>
     </div>
   );
