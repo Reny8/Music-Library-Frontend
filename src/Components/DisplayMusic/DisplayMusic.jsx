@@ -1,5 +1,21 @@
 import "./DisplayMusic.css";
+import Buttons from "./Buttons.jsx";
+import axios from 'axios'
+
 const DisplayMusic = (props) => {
+  async function updateLikes(songPk) {
+    let response = await axios.patch(`http://127.0.0.1:8000/music/${songPk}/`);
+    if (response.status === 202) await props.getAllSongs();
+  }
+  async function updateSong(songPk) {
+    let response = await axios.put(`http://127.0.0.1:8000/music/${songPk}/`);
+    if (response.status === 200) console.log(response.data);
+  }
+
+  async function deleteSong(songPk) {
+    let response = await axios.delete(`http://127.0.0.1:8000/music/${songPk}/`);
+    if (response.status === 204) console.log(response.data);
+  }
   return (
     <div>
       <table className="table table-striped">
@@ -12,7 +28,7 @@ const DisplayMusic = (props) => {
             <th scope="col">RELEASE DATE</th>
           </tr>
         </thead>
-        <tbody className="content">
+        <tbody>
           {props.songs.map((song) => {
             return (
               <tr key={song.id} scope="row">
@@ -24,13 +40,7 @@ const DisplayMusic = (props) => {
                 <td>{song.title}</td>
                 <td>{song.genre}</td>
                 <td>{song.release_date}</td>
-                <td>
-                  <div className='button'>
-                    <button>Like {song.likes}</button>
-                    <button>Update</button>
-                    <button>Delete</button>
-                  </div>
-                </td>
+                <Buttons songs = {song} updateLikes={updateLikes} updateSong={updateSong} deleteSong={deleteSong}/>
               </tr>
             );
           })}

@@ -22,18 +22,25 @@ function App() {
       await getAllSongs();
     }
   }
+  
 
   return (
     <div>
       <div>
-        <SearchBar songs={songs} setSongs={setSongs} />
+        <SearchBar
+          songs={songs}
+          setSongs={setSongs}
+          getAllSongs={getAllSongs}
+        />
       </div>
       <div>
-        <a href='#add-song'><button>Add A Song</button></a>
+        <a href="#add-song">
+          <button>Add A Song</button>
+        </a>
       </div>
       <div>
-        <DisplayMusic songs={songs} />
-        <div id='add-song'>
+        <DisplayMusic songs={songs} getAllSongs={getAllSongs} />
+        <div id="add-song">
           <AddSong songs={songs} newSong={newSong} />
         </div>
       </div>

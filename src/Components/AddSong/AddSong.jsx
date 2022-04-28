@@ -20,6 +20,12 @@ function Add(event) {
         album_image:album_image,
     }
     props.newSong(newSong)
+    setAlbumImage("")
+    setAlbum("")
+    setArtist("")
+    setTitle("")
+    setGenre("")
+    setReleaseDate("")
 }
 
 

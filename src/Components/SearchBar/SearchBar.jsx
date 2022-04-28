@@ -19,6 +19,10 @@ const SearchBar = (props) => {
       }
     });
     props.setSongs(response);
+    setSongSearch("")
+  if (songSearch === "") {
+    props.getAllSongs()
+  }
   }
 
   return (
