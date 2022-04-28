@@ -5,4 +5,43 @@ img {
 
 .button {
     display:flex;
+    display: wrap;
+}
+.each-1 {
+    display: flex;
+    padding: 1rem;
+}
+.each-2 {
+    display: flex;
+    padding: 1rem;
+    
+}
+.each-3 {
+    display: flex;
+    padding: 1rem;
+    
+}
+.each-1 button {
+    height: 2rem;
+    background-color: olive;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px;
+    border-style: none;
+}
+.each-2 button {
+    height: 2rem;
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px;
+    border-style: none;
+}
+.each-3 button {
+    height: 2rem;
+    background-color: darkred;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px;
+    border-style: none;
 }

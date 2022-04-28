@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./DisplayMusic.css";
 const Buttons = (props) => {
   const [object, setObject] = useState({
     title: props.songs.title,
@@ -34,9 +34,9 @@ const Buttons = (props) => {
     } else if (category == "release date") {
       setObject({ ...object, release_date: value });
       props.updateSong(id, object);
-    } else if (category == 'image') {
-      setObject({ ...object, album_image: value})
-      props.updateSong(id,object)
+    } else if (category == "image") {
+      setObject({ ...object, album_image: value });
+      props.updateSong(id, object);
     }
   }
 
@@ -51,11 +51,22 @@ const Buttons = (props) => {
 
   return (
     <td>
-      <button onClick={() => handleLikes(props.songs.id)}>
-        Like {props.songs.likes}
-      </button>
-      <button onClick={() => handleUpdate(props.songs.id)}>Update</button>
-      <button onClick={() => handleDelete(props.songs.id)}>Delete</button>
+      <div className="button">
+        <div className='each-1'>
+          <button onClick={() => handleLikes(props.songs.id)}>
+            Like {props.songs.likes}
+          </button>
+        </div>
+        <div className='each-2'>
+          <button onClick={() => handleUpdate(props.songs.id)}>Update</button>
+        </div>
+        <div className='each-3'>
+          {" "}
+          <button onClick={() => handleDelete(props.songs.id)}>
+            Delete
+          </button>{" "}
+        </div>
+      </div>
     </td>
   );
 };
