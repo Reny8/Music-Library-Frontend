@@ -30,9 +30,9 @@ function App() {
       </div>
       <div>
         <DisplayMusic songs={songs} />
-      </div>
       <div>
         <AddSong songs={songs} newSong={newSong} />
+      </div>
       </div>
     </div>
   );
