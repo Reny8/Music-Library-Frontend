@@ -28,8 +28,6 @@ function App() {
       <div>
         <SearchBar songs={songs} setSongs={setSongs} />
       </div>
-      <hr />
-      <h3 className="add">Add A Song Here</h3>
       <div>
         <AddSong songs={songs} newSong={newSong} />
       </div>

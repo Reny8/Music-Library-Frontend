@@ -5,10 +5,7 @@ ul {
     padding-right: 1rem;
     padding-left: 0rem;
 }
-.add {
-    display: flex;
-    justify-content: center;
-}
+
 div {
     font-family: cursive;
 }

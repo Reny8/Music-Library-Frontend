@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-
+import './AddSong.css'
 const AddSong = (props) => {
 const [album_image, setAlbumImage] = useState("")
 const [album, setAlbum] = useState("")
@@ -25,8 +25,9 @@ function Add(event) {
 
 
     return (
-       <form onSubmit={Add}>
+       <form className= 'create' onSubmit={Add}>
         <div className= 'form-group'>
+            <h3>Add A Song Here</h3>
             <label>Album Image</label>
             <input value={album_image} className= 'form-control' placeholder='Add a url of your image...'onChange= {(event) => setAlbumImage(event.target.value)}/>
             <label>Album</label>
