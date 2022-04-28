@@ -23,7 +23,7 @@ const SearchBar = (props) => {
 
   return (
     <div className="nav-bar">
-      <h1>Music Library</h1>
+      <h1 className="heading">Music Library</h1>
       <form onSubmit={searchResults}>
         <div>
           <input

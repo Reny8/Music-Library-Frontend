@@ -18,7 +18,7 @@ function App() {
   }
   async function newSong(newSong) {
     let response = await axios.post("http://127.0.0.1:8000/music/", newSong);
-    if (response.status == 201) {
+    if (response.status === 201) {
       await getAllSongs();
     }
   }
@@ -29,7 +29,7 @@ function App() {
         <SearchBar songs={songs} setSongs={setSongs} />
       </div>
       <hr />
-      <h3>Add A Song Here</h3>
+      <h3 className="add">Add A Song Here</h3>
       <div>
         <AddSong songs={songs} newSong={newSong} />
       </div>

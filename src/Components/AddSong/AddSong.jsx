@@ -38,7 +38,7 @@ function Add(event) {
             <label>Genre</label>
             <input value={genre} className= 'form-control' onChange= {(event) => setGenre(event.target.value)}/>
             <label>Release Date</label>
-            <input value={release_date} className= 'form-control' onChange= {(event) => setReleaseDate(event.target.value)}/>
+            <input value={release_date} className= 'form-control' placeholder="yyyy-mm-dd"onChange= {(event) => setReleaseDate(event.target.value)}/>
         </div>
         <button type="submit">Add</button>
        </form>
