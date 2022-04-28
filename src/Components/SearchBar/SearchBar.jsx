@@ -19,24 +19,29 @@ const SearchBar = (props) => {
       }
     });
     props.setSongs(response);
-    setSongSearch("")
-  if (songSearch === "") {
-    props.getAllSongs()
-  }
+    setSongSearch("");
+    if (songSearch === "") {
+      props.getAllSongs();
+    }
   }
 
   return (
     <div className="nav-bar">
+      <div className="navbar">
+        <a href="#add-song">
+          <button className="add">Add A New Song</button>
+        </a>
+      </div>{" "}
       <h1 className="heading">Music Library</h1>
       <form onSubmit={searchResults}>
         <div>
-          <input
+          <input className='user-input'
             type="text"
             value={songSearch}
             onChange={(e) => setSongSearch(e.target.value)}
             placeholder="Search here..."
           />{" "}
-          <button type="submit">Search</button>
+          <button className ='search' type="submit">Search</button>
         </div>
       </form>
     </div>

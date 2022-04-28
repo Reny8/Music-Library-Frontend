@@ -9,3 +9,16 @@ ul {
 div {
     font-family: cursive;
 }
+.add {
+    border-style: none;
+    width: 11rem;
+    height: 2rem;
+    border-radius: 10px;
+    color: white;
+    background-color:rgb(106, 60, 149);
+
+}
+.navbar {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}

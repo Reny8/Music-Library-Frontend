@@ -33,11 +33,7 @@ function App() {
           getAllSongs={getAllSongs}
         />
       </div>
-      <div>
-        <a href="#add-song">
-          <button>Add A Song</button>
-        </a>
-      </div>
+      
       <div>
         <DisplayMusic songs={songs} getAllSongs={getAllSongs} />
         <div id="add-song">
