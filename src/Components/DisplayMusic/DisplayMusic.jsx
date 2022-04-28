@@ -7,8 +7,8 @@ const DisplayMusic = (props) => {
     let response = await axios.patch(`http://127.0.0.1:8000/music/${songPk}/`);
     if (response.status === 202) await props.getAllSongs();
   }
-  async function updateSong(songPk) {
-    let response = await axios.put(`http://127.0.0.1:8000/music/${songPk}/`);
+  async function updateSong(songPk,songObject) {
+    let response = await axios.put(`http://127.0.0.1:8000/music/${songPk}/`,songObject);
     if (response.status === 200) await props.getAllSongs()
   }
 

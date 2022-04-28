@@ -3,3 +3,6 @@ img {
     height: auto;
 }
 
+.button {
+    display:flex;
+}
