@@ -22,3 +22,7 @@ div {
     margin-left: 1rem;
     margin-bottom: 1rem;
 }
+.page {
+    background-color: rgb(41, 40, 40);
+    color: white;
+}

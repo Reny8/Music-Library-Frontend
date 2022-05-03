@@ -18,7 +18,7 @@ const DisplayMusic = (props) => {
   }
   return (
     <div>
-      <table className="table table-striped">
+      <table className="table-dark" >
         <thead>
           <tr>
             <th scope="col">ALBUM</th>

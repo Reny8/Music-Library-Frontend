@@ -25,7 +25,7 @@ function App() {
   
 
   return (
-    <div>
+    <div className='page'>
       <div>
         <SearchBar
           songs={songs}
@@ -34,7 +34,7 @@ function App() {
         />
       </div>
       
-      <div>
+      <div className='color-type'>
         <DisplayMusic songs={songs} getAllSongs={getAllSongs} />
         <div id="add-song">
           <AddSong songs={songs} newSong={newSong} />

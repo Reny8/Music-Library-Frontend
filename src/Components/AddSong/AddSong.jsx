@@ -72,7 +72,7 @@ const AddSong = (props) => {
         />
       </div>
       <div className="around-button">
-        <button class="add-song" type="submit">
+        <button className="add-song" type="submit">
           Add
         </button>
       </div>
