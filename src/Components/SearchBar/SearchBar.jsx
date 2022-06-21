@@ -6,13 +6,13 @@ const SearchBar = (props) => {
   function searchResults(event) {
     event.preventDefault();
     let response = props.songs.filter((song) => {
-      if (song.album.includes(songSearch)) {
+      if (song.album.toLowerCase().includes(songSearch.toLowerCase())) {
         return true;
-      } else if (song.artist.includes(songSearch)) {
+      } else if (song.artist.toLowerCase().includes(songSearch.toLowerCase())) {
         return true;
-      } else if (song.title.includes(songSearch)) {
+      } else if (song.title.toLowerCase().includes(songSearch.toLowerCase())) {
         return true;
-      } else if (song.genre.includes(songSearch)) {
+      } else if (song.genre.toLowerCase().includes(songSearch.toLowerCase())) {
         return true;
       } else if (song.release_date.includes(songSearch)) {
         return true;
@@ -35,13 +35,16 @@ const SearchBar = (props) => {
       <h1 className="heading">Music Library</h1>
       <form onSubmit={searchResults}>
         <div>
-          <input className='user-input'
+          <input
+            className="user-input"
             type="text"
             value={songSearch}
             onChange={(e) => setSongSearch(e.target.value)}
             placeholder="Search here..."
           />{" "}
-          <button className ='search' type="submit">Search</button>
+          <button className="search" type="submit">
+            Search
+          </button>
         </div>
       </form>
     </div>
